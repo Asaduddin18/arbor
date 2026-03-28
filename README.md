@@ -1,4 +1,4 @@
-# Arbor v2
+# Arbor
 
 Tree-structured multi-agent orchestration framework built on Claude. Arbor decomposes a goal into a task graph, assigns tasks to specialized agents, reviews each output, and maintains a versioned markdown memory tree — all driven by an append-only Write-Ahead Log (WAL) that enables full crash recovery.
 
