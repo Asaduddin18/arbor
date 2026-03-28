@@ -1,0 +1,15 @@
+.claude/
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+.env
+*.ndjson
+arbor-run/
+memory/
+*.tmp
+.pytest_cache/
+.coverage

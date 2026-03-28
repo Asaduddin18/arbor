@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arbor"
+version = "2.0.0"
+description = "Tree-structured multi-agent orchestration with WAL, depth-minimized scheduling, and periodic audit"
+requires-python = ">=3.11"
+dependencies = [
+    "anthropic>=0.40.0",
+    "rich>=13.7.0",
+    "mistletoe>=1.3.0",
+    "typer>=0.12.0",
+]
+
+[project.scripts]
+arbor = "arbor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["arbor*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "pytest-mock>=3.12.0",
+]
